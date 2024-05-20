@@ -1,0 +1,43 @@
+<%- include('../partials/header.ejs') %>
+    <main id="main" class="main">
+        <table class="table w-25 m-auto">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">SubCategory</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% product && product.map((product, i)=>{ %>
+                    <tr>
+                        <td>
+                            <%= i + 1 %>
+                        </td>
+                        <td>
+                            <%= product.name %>
+                        </td>
+                        <td>
+                            <% if (product.subCategoryID) { %>
+                                <%= product.subCategoryID.name %>
+                                    <% } %>
+                        </td>
+                        <td>
+                            <% if (product.subCategoryID && product.subCategoryID.categoryID) { %>
+                                <%= product.subCategoryID.categoryID.name %>
+                                    <% } %>
+                        </td>
+                        <td>
+                            <div class="d-flex">
+                                <a href="/product/edit/<%= product._id %>" class="btn btn-primary">Edit</a>
+                                <a href="/product/delete/<%= product._id %>" class="btn btn-danger mx-2">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </main>
+    <%- include('../partials/footer.ejs') %>

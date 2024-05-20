@@ -1,0 +1,26 @@
+<%- include('../partials/header.ejs') %>
+    <main id="main" class="main">
+        <div class="login-dark mt-5">
+            <form class="form m-auto" method="post">
+                <p class="form-title">SignUp</p>
+                <div class="input-container">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" placeholder="Enter email" required>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="submit">
+                    SignUp
+                </button>
+
+                <p class="signup-link">
+                    Have account?
+                    <a href="/user/login">Login</a>
+                </p>
+            </form>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>

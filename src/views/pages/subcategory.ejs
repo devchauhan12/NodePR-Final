@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs') %>
+    <main id="main" class="main">
+        <table class="table w-25 m-auto">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">SubCategory</th>
+                    <th scope="col">Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% subCat && subCat.map((subcategory, i)=>{ %>
+                    <tr>
+                        <td>
+                            <%= i + 1 %>
+                        </td>
+                        <td>
+                            <%= subcategory.name %>
+                        </td>
+                        <td>
+                            <% if (subcategory.categoryID) { %>
+                                <%= subcategory.categoryID.name %>
+                                    <% } %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </main>
+    <%- include('../partials/footer.ejs') %>

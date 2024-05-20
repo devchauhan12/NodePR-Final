@@ -1,0 +1,21 @@
+<%- include('../partials/header.ejs') %>
+    <main id="main" class="main">
+        <div class="login-dark mt-5">
+            <form class="form m-auto" method="post">
+                <p class="form-title">Add Manager</p>
+                <div class="input-container">
+                    <input type="text" name="name" placeholder="Manager's name" required>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" placeholder="Manager's email" required>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="password" placeholder="Manager's password" required>
+                </div>
+                <button type="submit" class="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>

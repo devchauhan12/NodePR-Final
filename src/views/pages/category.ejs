@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs') %>
+    <main id="main" class="main">
+        <table class="table w-25 m-auto">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% Cat && Cat.map((category, i)=>{ %>
+                    <tr>
+                        <td>
+                            <%= i + 1 %>
+                        </td>
+                        <td>
+                            <%= category.name %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </main>
+    <%- include('../partials/footer.ejs') %>

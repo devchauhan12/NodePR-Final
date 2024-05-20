@@ -1,0 +1,39 @@
+<%- include('../partials/header.ejs') %>
+    <main id="main" class="main">
+        <div class="login-dark mt-5">
+            <form class="form m-auto" method="post">
+                <p class="form-title">Login to your account</p>
+                <div class="input-container">
+                    <input type="email" name="email" placeholder="Enter email" required>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="submit">
+                    Login       
+                </button>
+
+                <p class="signup-link">
+                    No account?
+                    <a href="/user/signup">Sign up</a>
+                </p>
+            </form>
+        </div>
+        <div class="m-auto bg-secondary p-3 rounded-3 w-25 mt-4">
+            <ul class="bg-white rounded mt-3">
+                <li>
+                    <h2>Admin Login</h2>
+                    <p class="mb-0">E-Mail : admin@gmail.com</p>
+                    <p>Password : 12345</p>
+                </li>
+            </ul>
+            <ul class="bg-white rounded mt-3">
+                <li>
+                    <h2>Manager Login</h2>
+                    <p class="mb-0">E-Mail : manager@gmail.com</p>
+                    <p>Password : 12345</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
